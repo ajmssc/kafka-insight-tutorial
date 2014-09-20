@@ -39,6 +39,11 @@ bin/kafka-topics.sh --create --topic mytopic --replication-factor 1 --partitions
 ```
 
 
+Install kafka-python
+```
+pip install kafka-python
+```
+
 
 Run the python scripts.
 ```
