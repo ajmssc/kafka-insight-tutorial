@@ -25,12 +25,12 @@ Change broker id if running multiple instances
 
 Optional: launch a local zookeeper (skip if you already have a zookeeper instance)
 ```
-bin/zookeeper-server-start.sh
+bin/zookeeper-server-start.sh &
 ```
 
 Start Kafka
 ```
-bin/kafka-server-start.sh
+bin/kafka-server-start.sh config/server.properties &
 ```
 
 Set up a new topic
@@ -41,7 +41,7 @@ bin/kafka-topics.sh --create --topic mytopic --replication-factor 1 --partitions
 
 Install kafka-python
 ```
-pip install kafka-python
+sudo pip install kafka-python
 ```
 
 
@@ -53,3 +53,7 @@ python consumer.py
 ```
 
 
+To stop Kafka:
+```
+bin/kafka-server-stop.sh
+```
